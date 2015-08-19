@@ -1,3 +1,4 @@
 <?php
 require_once 'init.php';
-echo QueryBuilder::getcon()->UpdateTable('user',["name"=>"string","ID"=>"int"],"ADD");
+$sc=new SchemaBuilder('omar',['ID'=>'INT']);
+$sc->DropForiegnKey("ID", "ID", "user");

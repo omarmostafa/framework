@@ -18,6 +18,7 @@ class DB {
         
         public  $database;
         public  $object;
+        
         private function __construct() {  
           try
             {
@@ -61,6 +62,9 @@ class DB {
             $result->execute();
             return $result;
 	}
+        public function exec($sql) {
+            $this->connection->exec($sql);
+        }
         
         /**
          * 
